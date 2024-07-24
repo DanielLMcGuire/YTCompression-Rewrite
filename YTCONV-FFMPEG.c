@@ -3,14 +3,7 @@
 #include <libswscale/swscale.h>
 #include <libavutil/imgutils.h>
 #include <libavutil/opt.h>
-
-void logo() {
-    const char *VERSION = "0.1.0.7.2430";
-    const char *TITLE = "YouTube Compression Tool";
-    char LOGO[256];
-    snprintf(LOGO, sizeof(LOGO), "%s %s", TITLE, VERSION);
-    printf("\033[34m%s\033[0m\n", LOGO); // Blue text
-}
+#include "include/DMC/YT-CPlogo.h"
 
 void encode(AVCodecContext *enc_ctx, AVFrame *frame, AVPacket *pkt, AVFormatContext *output_ctx) {
     int ret;
